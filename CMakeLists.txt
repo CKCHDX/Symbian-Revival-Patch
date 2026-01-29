@@ -182,6 +182,21 @@ else()
 endif()
 
 # ========================================
+# TESTS
+# ========================================
+if(TARGET hw_detection)
+    message(STATUS "Adding hardware detection test...")
+    
+    add_executable(hw_detection_test tests/hw_detection_test.cpp)
+    target_link_libraries(hw_detection_test hw_detection)
+    target_include_directories(hw_detection_test PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/hw_detection
+    )
+    
+    message(STATUS "  Test executable: hw_detection_test")
+endif()
+
+# ========================================
 # BUILD SUMMARY
 # ========================================
 message(STATUS "")
@@ -210,6 +225,11 @@ if(TARGET hw_detection)
     message(STATUS "✓ Hardware detection module built")
 endif()
 
+if(TARGET hw_detection_test)
+    message(STATUS "✓ Hardware detection test built")
+endif()
+
 message(STATUS "")
 message(STATUS "To build: ninja or make")
+message(STATUS "To test:  ./bin/hw_detection_test")
 message(STATUS "==========================================")
