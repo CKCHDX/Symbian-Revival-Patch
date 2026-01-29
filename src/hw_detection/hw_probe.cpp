@@ -115,6 +115,7 @@ CpuInfo HardwareProbe::probeCpuArm() {
     std::ifstream cpuinfo("/proc/cpuinfo");
     if (cpuinfo.is_open()) {
         std::string line;
+        info.cores = 0;  // Initialize before counting
         while (std::getline(cpuinfo, line)) {
             if (line.find("Hardware") != std::string::npos ||
                 line.find("model name") != std::string::npos) {
