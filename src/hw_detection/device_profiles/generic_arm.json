@@ -1,0 +1,58 @@
+{
+  "device_id": "generic_arm",
+  "name": "Generic ARM Device",
+  "description": "Generic device profile for ARM-based devices",
+  "soc": "generic_arm",
+  "arch": "arm",
+  "cpu": {
+    "architecture": "armv7-a",
+    "cores": "auto-detect",
+    "frequency": "auto-detect"
+  },
+  "memory": {
+    "type": "LPDDR2/LPDDR3",
+    "size": "auto-detect"
+  },
+  "display": {
+    "type": "lcd",
+    "resolution": "auto-detect",
+    "interface": "dsi"
+  },
+  "input": {
+    "touch": {
+      "enabled": true,
+      "type": "capacitive",
+      "i2c_bus": 0,
+      "i2c_address": "auto-detect",
+      "interrupt_gpio": "auto-detect"
+    }
+  },
+  "storage": {
+    "primary": {
+      "type": "emmc",
+      "interface": "sdio"
+    }
+  },
+  "network": {
+    "wifi": {
+      "enabled": true,
+      "chipset": "auto-detect",
+      "interface": "sdio",
+      "sdio_bus": 1
+    },
+    "bluetooth": {
+      "enabled": true,
+      "chipset": "auto-detect",
+      "interface": "uart",
+      "uart_port": 1
+    }
+  },
+  "usb": {
+    "enabled": true,
+    "version": "2.0"
+  },
+  "audio": {
+    "type": "i2s",
+    "interface": "i2s"
+  }
+}
