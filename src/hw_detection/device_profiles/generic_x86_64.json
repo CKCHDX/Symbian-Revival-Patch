@@ -1,0 +1,57 @@
+{
+  "device_id": "generic_x86_64",
+  "name": "Generic x86_64 PC",
+  "description": "Generic device profile for x86_64 desktop and laptop computers",
+  "soc": "generic",
+  "arch": "x86_64",
+  "cpu": {
+    "architecture": "x86_64",
+    "cores": "auto-detect",
+    "frequency": "auto-detect"
+  },
+  "memory": {
+    "type": "DDR3/DDR4",
+    "size": "auto-detect"
+  },
+  "display": {
+    "type": "vga",
+    "resolution": "auto-detect",
+    "interface": "vga"
+  },
+  "input": {
+    "keyboard": {
+      "type": "ps2",
+      "interface": "ps2"
+    },
+    "mouse": {
+      "type": "ps2",
+      "interface": "ps2"
+    },
+    "touch": {
+      "enabled": false
+    }
+  },
+  "storage": {
+    "primary": {
+      "type": "ahci",
+      "interface": "sata"
+    }
+  },
+  "network": {
+    "ethernet": {
+      "type": "generic",
+      "interface": "pci"
+    },
+    "wifi": {
+      "enabled": false
+    }
+  },
+  "usb": {
+    "enabled": true,
+    "version": "2.0"
+  },
+  "audio": {
+    "type": "hda",
+    "interface": "pci"
+  }
+}

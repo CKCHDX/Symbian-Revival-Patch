@@ -1,0 +1,60 @@
+# Build artifacts
+build/
+_codeql_build_dir/
+_codeql_detected_source_root
+*.o
+*.obj
+*.bin
+*.elf
+*.so
+*.a
+*.lib
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+!CMakeLists.txt
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Symbian source code (cloned separately)
+Symbian-OS/symbian-os/kernel/
+Symbian-OS/symbian-os/graphics/
+Symbian-OS/symbian-os/devicesrv/
+Symbian-OS/symbian-os/userlib/
+Symbian-OS/symbian-os/s60/
+Symbian-OS/symbian-os/qt/
+Symbian-OS/symbian-os/commsfw/
+Symbian-OS/symbian-os/cellularsrv/
+Symbian-OS/symbian-os/worldserver/
+Symbian-OS/symbian-os/build-tools/
+Symbian-OS/symbian-os/securitysrv/
+Symbian-OS/symbian-os/web/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Package manager
+node_modules/
+__pycache__/
+*.pyc
